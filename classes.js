@@ -27,9 +27,21 @@
       - Example: "Dave Smith Widget"
 
   Call your class Employee and receive all the data in the constructor in the order listed above.
-*/
+// */
 
-//Code Here
+class Employee {
+  constructor(first, last, email, age){
+    this.first = first;
+    this.last = last;
+    this.email = email;
+    this.age = age;
+}
+
+makeWidget(){
+  return  `${first} + ${last} Widget`
+}
+}
+
 
 
 ////////// PROBLEM 2 //////////
@@ -45,9 +57,14 @@
       - Fire removes employees from their list of reports at the given index
 
   Call your new class Manager
-*/
+// */
 
-//Code Here
+class Manager extends Employee {
+  constructor(first, last, email, age, reports, hire, fire){
+    super(first, last, email, age)
+    this.reports = [];
+  }
+}
 
 
 ////////// PROBLEM 3 //////////
@@ -71,8 +88,39 @@
   Call your new class ProgressiveManager
 */
 
-//Code Here
+class ProgressiveManager extends Manager {
+  constructor(reports, hire, fire, title, bonus){
+  super(reports, hire, fire)
+  this.title = 'Not a manager';
+  this.bonus = 0;
+}
 
+hireOrFire(){
+  if(employee = 0){
+    return 'Not a manager';
+//   } else if {
+//     (employee < 4) {
+//       return 'Barely Manager';
+//     } else if{
+//       (employee <11) {
+//         return 'Mostly Manager';
+//       } else  if{
+//         (employee < 51) {
+//           return 'Manager';
+//         } else if {
+//           (employee < 101) {
+//             return 'Manager Plus';
+//           } else if {
+//             (employee <102) {
+//               return 'Bestest Manager';
+//             }
+//           }
+//         }
+//       }
+//     }
+  }
+}
+}
 
 
 ////////// PROBLEM 4 - Black Diamond //////////
@@ -98,6 +146,17 @@
         - The anonymous function should decrease wear_and_tear_count by 10, and set needs_reboot to false
 */
 
-//Code Here
+class Machine {
+  consturctor(){
+  this.widgets_made_count = 0;
+  this.wear_and_tear = 0;
+  this.needs_reboot = false;
+}
 
-
+makeWidgets(num){
+// let num = widgets_made_count++;
+// }
+// fixMachine(){
+//   let need_reboot = true;
+}
+}
